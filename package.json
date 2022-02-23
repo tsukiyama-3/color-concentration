@@ -10,6 +10,7 @@
     "nuxt3": "latest"
   },
   "dependencies": {
-    "claymorphism-css": "^1.0.5"
+    "claymorphism-css": "^1.0.5",
+    "firebase": "^9.6.7"
   }
 }

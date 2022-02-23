@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { useDots } from '~~/composables/dot'
+const { loginWithGoogle, user } = useAuth()
 const {
   col,
   row,
@@ -27,6 +28,8 @@ const {
     onselectstart="return false"
   >
     <Header />
+    <p @click="loginWithGoogle">Google認証</p>
+    <p v-if="user">ようこそ{{ user.displayName }}さん</p>
     <div class="flex-grow flex justify-center gap-4 mt-8">
       <div class="w-512px h-514px border-1 border-hex-000000">
         <div class="grid grid-cols-64">
