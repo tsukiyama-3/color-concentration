@@ -3,7 +3,7 @@ import {
   getAuth,
   signInWithPopup,
   GoogleAuthProvider,
-} from 'firebase/auth';
+} from 'firebase/auth'
 
 export const useAuth = () => {
   const user = ref()
@@ -16,7 +16,7 @@ export const useAuth = () => {
     })
     const credential = result != null ? await GoogleAuthProvider.credentialFromResult(result) : null
     if (result != null && credential != null) {
-      console.log(result, credential, 'hogehoge');
+      console.log(result, credential)
     }
     user.value = result.user
   }
